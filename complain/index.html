@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Care Desk</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ===================== LANDING PAGE ===================== -->
+<div id="page-landing" class="page active">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <i class="fas fa-graduation-cap"></i>
+      <span>College<strong>Care</strong>Desk</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features-section" onclick="scrollToFeatures()">Features</a>
+      <a href="#" onclick="showPage('page-login')" class="btn-outline">Log In</a>
+      <a href="#" onclick="showPage('page-register')" class="btn-primary">Get Started</a>
+    </div>
+    <button class="hamburger" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-shield-alt"></i> Trusted by 500+ Colleges</div>
+      <h1>Your Voice Matters.<br/><span class="gradient-text">We Listen & Act.</span></h1>
+      <p>College Care Desk is your one-stop platform to submit, track, and resolve campus concerns — from academics to infrastructure, hostel to transport.</p>
+      <div class="hero-buttons">
+        <button onclick="showPage('page-register')" class="btn-hero-primary">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+        <button onclick="showPage('page-login')" class="btn-hero-secondary">
+          <i class="fas fa-sign-in-alt"></i> Sign In
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>12,400+</strong><span>Complaints Resolved</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>98%</strong><span>Satisfaction Rate</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>48h</strong><span>Avg. Resolution Time</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-preview">
+        <div class="preview-header">
+          <div class="preview-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="preview-title">Live Dashboard</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-card blue"><i class="fas fa-ticket-alt"></i><div><strong>24</strong><small>Open Tickets</small></div></div>
+          <div class="preview-card green"><i class="fas fa-check-circle"></i><div><strong>156</strong><small>Resolved</small></div></div>
+          <div class="preview-card orange"><i class="fas fa-clock"></i><div><strong>8</strong><small>Pending</small></div></div>
+          <div class="preview-ticket">
+            <div class="pt-dot green"></div>
+            <div class="pt-info"><strong>Hostel Water Issue</strong><small>Resolved · 2h ago</small></div>
+          </div>
+          <div class="preview-ticket">
+            <div class="pt-dot orange"></div>
+            <div class="pt-info"><strong>Library AC Not Working</strong><small>In Progress · 5h ago</small></div>
+          </div>
+          <div class="preview-ticket">
+            <div class="pt-dot blue"></div>
+            <div class="pt-info"><strong>WiFi Connectivity Issue</strong><small>Open · 1h ago</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features-section">
+    <div class="section-label">WHY CHOOSE US</div>
+    <h2>Everything You Need to <span class="gradient-text">Manage Campus Issues</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue"><i class="fas fa-paper-plane"></i></div>
+        <h3>Easy Submission</h3>
+        <p>Submit complaints in seconds with category tags, priority levels, and optional file attachments.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green"><i class="fas fa-chart-line"></i></div>
+        <h3>Real-Time Tracking</h3>
+        <p>Follow your complaint's journey from submission to resolution with live status updates.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple"><i class="fas fa-bell"></i></div>
+        <h3>Instant Notifications</h3>
+        <p>Get notified the moment your complaint status changes — no more waiting in the dark.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon orange"><i class="fas fa-shield-alt"></i></div>
+        <h3>Anonymous Filing</h3>
+        <p>Choose to file complaints anonymously. Your privacy is our top priority.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon red"><i class="fas fa-chart-pie"></i></div>
+        <h3>Analytics Dashboard</h3>
+        <p>Admins get powerful insights into complaint trends, resolution rates, and department performance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon teal"><i class="fas fa-users"></i></div>
+        <h3>Role-Based Access</h3>
+        <p>Students, staff, and admins each get tailored dashboards with role-specific tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="section-label">HOW IT WORKS</div>
+    <h2>Three Simple Steps to <span class="gradient-text">Resolution</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Submit Your Complaint</h3>
+        <p>Fill out the complaint form with details, category, and priority. Attach files if needed.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Admin Reviews & Assigns</h3>
+        <p>Our admin team reviews your complaint and assigns it to the relevant department.</p>
+      </div>
+      <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Get It Resolved</h3>
+        <p>Track progress in real-time and receive a notification once your issue is resolved.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <i class="fas fa-graduation-cap"></i>
+      <span>College<strong>Care</strong>Desk</span>
+    </div>
+    <p>© 2026 CollegeCareDesk. Making campus life better, one complaint at a time.</p>
+  </footer>
+</div>
+
+
+<!-- ===================== LOGIN PAGE ===================== -->
+<div id="page-login" class="page">
+  <div class="auth-container">
+    <div class="auth-left">
+      <div class="auth-brand" onclick="showPage('page-landing')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>College<strong>Care</strong>Desk</span>
+      </div>
+      <h2>Welcome back!</h2>
+      <p>Sign in to manage your complaints and stay updated on campus issues.</p>
+      <div class="auth-illustration">
+        <i class="fas fa-user-shield"></i>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Sign In</h2>
+        <p class="auth-sub">Enter your credentials to access your account</p>
+        <div id="login-error" class="alert alert-error hidden"></div>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="login-email" placeholder="you@college.edu" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Password</label>
+            <div class="input-eye">
+              <input type="password" id="login-password" placeholder="Enter your password" required/>
+              <i class="fas fa-eye" onclick="togglePwd('login-password',this)"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn-form-primary">
+            <i class="fas fa-sign-in-alt"></i> Sign In
+          </button>
+        </form>
+        <div class="auth-footer-link">
+          Don't have an account? <a href="#" onclick="showPage('page-register')">Create one</a>
+        </div>
+        <div class="demo-creds">
+          <p><strong>Demo credentials:</strong></p>
+          <p>Student: student@demo.com / demo123</p>
+          <p>Admin: admin@demo.com / admin123</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===================== REGISTER PAGE ===================== -->
+<div id="page-register" class="page">
+  <div class="auth-container">
+    <div class="auth-left">
+      <div class="auth-brand" onclick="showPage('page-landing')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>College<strong>Care</strong>Desk</span>
+      </div>
+      <h2>Join us today!</h2>
+      <p>Create your account and start submitting your campus concerns instantly.</p>
+      <div class="auth-illustration">
+        <i class="fas fa-user-plus"></i>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Create Account</h2>
+        <p class="auth-sub">Choose your account type to get started</p>
+
+        <!-- Role Tabs -->
+        <div class="role-tabs">
+          <button class="role-tab active" id="tab-student" onclick="switchRegTab('student')">
+            <i class="fas fa-user-graduate"></i> Student
+          </button>
+          <button class="role-tab" id="tab-admin" onclick="switchRegTab('admin')">
+            <i class="fas fa-user-shield"></i> Admin
+          </button>
+        </div>
+
+        <div id="register-error" class="alert alert-error hidden"></div>
+        <div id="register-success" class="alert alert-success hidden"></div>
+
+        <!-- Student Registration Form -->
+        <form id="form-student" onsubmit="handleRegister(event,'student')">
+          <div class="form-row">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> First Name</label>
+              <input type="text" id="s-fname" placeholder="John" required/>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Last Name</label>
+              <input type="text" id="s-lname" placeholder="Doe" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> College Email</label>
+            <input type="email" id="s-email" placeholder="student@college.edu" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-id-card"></i> Student ID</label>
+            <input type="text" id="s-studentid" placeholder="e.g. STU2024001" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-building"></i> Department</label>
+            <select id="s-department" required>
+              <option value="">Select Department</option>
+              <option>Computer Science</option>
+              <option>Electrical Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Civil Engineering</option>
+              <option>Business Administration</option>
+              <option>Physics</option>
+              <option>Mathematics</option>
+              <option>Chemistry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Password</label>
+            <div class="input-eye">
+              <input type="password" id="s-password" placeholder="Min 6 characters" required minlength="6"/>
+              <i class="fas fa-eye" onclick="togglePwd('s-password',this)"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Confirm Password</label>
+            <input type="password" id="s-confirm" placeholder="Repeat your password" required minlength="6"/>
+          </div>
+          <button type="submit" class="btn-form-primary">
+            <i class="fas fa-user-graduate"></i> Create Student Account
+          </button>
+        </form>
+
+        <!-- Admin Registration Form -->
+        <form id="form-admin" class="hidden" onsubmit="handleRegister(event,'admin')">
+          <div class="form-row">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> First Name</label>
+              <input type="text" id="a-fname" placeholder="Jane" required/>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Last Name</label>
+              <input type="text" id="a-lname" placeholder="Smith" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Admin Email</label>
+            <input type="email" id="a-email" placeholder="admin@college.edu" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-id-badge"></i> Employee ID</label>
+            <input type="text" id="a-empid" placeholder="e.g. ADM2024001" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-building"></i> Department</label>
+            <select id="a-department" required>
+              <option value="">Select Department</option>
+              <option>IT & Systems</option>
+              <option>Student Affairs</option>
+              <option>Hostel Management</option>
+              <option>Academic Affairs</option>
+              <option>Infrastructure</option>
+              <option>Library</option>
+              <option>Transport</option>
+              <option>General Administration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Password</label>
+            <div class="input-eye">
+              <input type="password" id="a-password" placeholder="Min 6 characters" required minlength="6"/>
+              <i class="fas fa-eye" onclick="togglePwd('a-password',this)"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Confirm Password</label>
+            <input type="password" id="a-confirm" placeholder="Repeat your password" required minlength="6"/>
+          </div>
+          <div class="admin-notice">
+            <i class="fas fa-info-circle"></i>
+            A confirmation email will be sent to your admin email address to verify your identity.
+          </div>
+          <button type="submit" class="btn-form-primary admin-btn">
+            <i class="fas fa-user-shield"></i> Create Admin Account
+          </button>
+        </form>
+
+        <div class="auth-footer-link">
+          Already have an account? <a href="#" onclick="showPage('page-login')">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===================== EMAIL CONFIRMATION PAGE ===================== -->
+<div id="page-email-confirm" class="page">
+  <div class="confirm-wrapper">
+    <div class="confirm-card">
+      <div class="confirm-icon">
+        <i class="fas fa-envelope-open-text"></i>
+      </div>
+      <h2>Check Your Email!</h2>
+      <p id="confirm-email-text">We've sent a confirmation link to <strong id="confirm-email-addr"></strong></p>
+      <div class="confirm-steps">
+        <div class="cs"><span>1</span><p>Open your email inbox</p></div>
+        <div class="cs"><span>2</span><p>Click the confirmation link</p></div>
+        <div class="cs"><span>3</span><p>Start using your admin account</p></div>
+      </div>
+      <div class="confirm-demo-note">
+        <i class="fas fa-info-circle"></i>
+        <strong>Demo Mode:</strong> In this demo, click below to simulate email verification.
+      </div>
+      <button onclick="simulateEmailVerify()" class="btn-form-primary">
+        <i class="fas fa-check-circle"></i> Simulate Email Verification
+      </button>
+      <a href="#" onclick="showPage('page-login')" class="back-link">Back to Login</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===================== STUDENT DASHBOARD ===================== -->
+<div id="page-student-dashboard" class="page">
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="student-sidebar">
+      <div class="sidebar-brand">
+        <i class="fas fa-graduation-cap"></i>
+        <span>CCD</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showStudentTab('overview',this)">
+          <i class="fas fa-home"></i><span>Overview</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showStudentTab('new-complaint',this)">
+          <i class="fas fa-plus-circle"></i><span>New Complaint</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showStudentTab('my-complaints',this)">
+          <i class="fas fa-list-alt"></i><span>My Complaints</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showStudentTab('profile',this)">
+          <i class="fas fa-user-circle"></i><span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="handleLogout()" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <button class="sidebar-toggle" onclick="toggleSidebar('student-sidebar')">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="topbar-title" id="student-page-title">Overview</div>
+        <div class="topbar-right">
+          <div class="notification-bell" onclick="toggleNotifications()">
+            <i class="fas fa-bell"></i>
+            <span class="notif-badge" id="notif-badge">3</span>
+          </div>
+          <div class="user-avatar" id="student-avatar">S</div>
+        </div>
+      </div>
+
+      <!-- Notification Dropdown -->
+      <div class="notif-dropdown hidden" id="notif-dropdown">
+        <div class="notif-header"><strong>Notifications</strong><a href="#" onclick="clearNotifs()">Clear all</a></div>
+        <div id="notif-list"></div>
+      </div>
+
+      <!-- Tab: Overview -->
+      <div id="student-tab-overview" class="tab-content active">
+        <div class="welcome-banner">
+          <div>
+            <h2>Good <span id="s-greeting"></span>, <span id="s-welcome-name"></span>! 👋</h2>
+            <p>Here's a summary of your complaints and campus updates.</p>
+          </div>
+          <button onclick="showStudentTab('new-complaint', null)" class="btn-primary-sm">
+            <i class="fas fa-plus"></i> New Complaint
+          </button>
+        </div>
+
+        <div class="stats-row" id="student-stats">
+          <div class="stat-card blue"><i class="fas fa-ticket-alt"></i><div><strong id="sc-total">0</strong><span>Total Filed</span></div></div>
+          <div class="stat-card orange"><i class="fas fa-clock"></i><div><strong id="sc-pending">0</strong><span>Pending</span></div></div>
+          <div class="stat-card yellow"><i class="fas fa-spinner"></i><div><strong id="sc-inprogress">0</strong><span>In Progress</span></div></div>
+          <div class="stat-card green"><i class="fas fa-check-circle"></i><div><strong id="sc-resolved">0</strong><span>Resolved</span></div></div>
+        </div>
+
+        <div class="recent-section">
+          <div class="section-header">
+            <h3>Recent Complaints</h3>
+            <a href="#" onclick="showStudentTab('my-complaints',null)" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div id="student-recent-list"></div>
+        </div>
+      </div>
+
+      <!-- Tab: New Complaint -->
+      <div id="student-tab-new-complaint" class="tab-content">
+        <div class="page-header">
+          <h2><i class="fas fa-plus-circle"></i> Submit a Complaint</h2>
+          <p>Fill in the details below to raise a campus concern.</p>
+        </div>
+        <div class="form-card">
+          <div id="complaint-submit-error" class="alert alert-error hidden"></div>
+          <div id="complaint-submit-success" class="alert alert-success hidden"></div>
+          <form id="complaint-form" onsubmit="handleComplaintSubmit(event)">
+            <div class="form-group">
+              <label><i class="fas fa-heading"></i> Complaint Title *</label>
+              <input type="text" id="c-title" placeholder="Brief description of the issue" required/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fas fa-tag"></i> Category *</label>
+                <select id="c-category" required>
+                  <option value="">Select Category</option>
+                  <option value="Academic">Academic</option>
+                  <option value="Hostel">Hostel / Accommodation</option>
+                  <option value="Infrastructure">Infrastructure</option>
+                  <option value="Library">Library</option>
+                  <option value="Transport">Transport</option>
+                  <option value="WiFi/Internet">WiFi / Internet</option>
+                  <option value="Cafeteria">Cafeteria / Food</option>
+                  <option value="Sports">Sports Facilities</option>
+                  <option value="Administration">Administration</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-exclamation-triangle"></i> Priority *</label>
+                <select id="c-priority" required>
+                  <option value="">Select Priority</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                  <option value="Urgent">Urgent</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-map-marker-alt"></i> Location / Building</label>
+              <input type="text" id="c-location" placeholder="e.g. Block C, Room 204"/>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-align-left"></i> Description *</label>
+              <textarea id="c-description" rows="5" placeholder="Describe the issue in detail — what happened, when, and how it affects you." required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="c-anonymous"/>
+              <label for="c-anonymous"><i class="fas fa-user-secret"></i> Submit Anonymously</label>
+            </div>
+            <div class="form-actions">
+              <button type="button" onclick="resetComplaintForm()" class="btn-secondary-sm">Clear Form</button>
+              <button type="submit" class="btn-primary-sm"><i class="fas fa-paper-plane"></i> Submit Complaint</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tab: My Complaints -->
+      <div id="student-tab-my-complaints" class="tab-content">
+        <div class="page-header">
+          <h2><i class="fas fa-list-alt"></i> My Complaints</h2>
+          <p>Track the status of all your filed complaints.</p>
+        </div>
+        <div class="filter-bar">
+          <input type="text" id="s-search" placeholder="Search complaints..." oninput="filterStudentComplaints()"/>
+          <select id="s-filter-status" onchange="filterStudentComplaints()">
+            <option value="">All Statuses</option>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <select id="s-filter-cat" onchange="filterStudentComplaints()">
+            <option value="">All Categories</option>
+            <option value="Academic">Academic</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Infrastructure">Infrastructure</option>
+            <option value="Library">Library</option>
+            <option value="Transport">Transport</option>
+            <option value="WiFi/Internet">WiFi/Internet</option>
+            <option value="Cafeteria">Cafeteria</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div id="student-complaints-list"></div>
+      </div>
+
+      <!-- Tab: Profile -->
+      <div id="student-tab-profile" class="tab-content">
+        <div class="page-header">
+          <h2><i class="fas fa-user-circle"></i> My Profile</h2>
+        </div>
+        <div class="profile-card">
+          <div class="profile-avatar-large" id="profile-avatar-large">S</div>
+          <div class="profile-info">
+            <div class="form-row">
+              <div class="form-group"><label>Full Name</label><input type="text" id="p-name" readonly/></div>
+              <div class="form-group"><label>Email</label><input type="text" id="p-email" readonly/></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Student ID</label><input type="text" id="p-sid" readonly/></div>
+              <div class="form-group"><label>Department</label><input type="text" id="p-dept" readonly/></div>
+            </div>
+            <div class="form-group"><label>Role</label><input type="text" id="p-role" readonly/></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<!-- ===================== ADMIN DASHBOARD ===================== -->
+<div id="page-admin-dashboard" class="page">
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <i class="fas fa-graduation-cap"></i>
+        <span>CCD</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showAdminTab('overview',this)">
+          <i class="fas fa-chart-pie"></i><span>Overview</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showAdminTab('all-complaints',this)">
+          <i class="fas fa-inbox"></i><span>All Complaints</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showAdminTab('users',this)">
+          <i class="fas fa-users"></i><span>Manage Users</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-profile',this)">
+          <i class="fas fa-user-shield"></i><span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="handleLogout()" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="topbar">
+        <button class="sidebar-toggle" onclick="toggleSidebar('admin-sidebar')">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="topbar-title" id="admin-page-title">Overview</div>
+        <div class="topbar-right">
+          <div class="admin-badge"><i class="fas fa-shield-alt"></i> Admin</div>
+          <div class="user-avatar admin-color" id="admin-avatar">A</div>
+        </div>
+      </div>
+
+      <!-- Tab: Admin Overview -->
+      <div id="admin-tab-overview" class="tab-content active">
+        <div class="welcome-banner admin-banner">
+          <div>
+            <h2>Admin Dashboard 🛡️</h2>
+            <p id="admin-welcome-name">Welcome back, Admin!</p>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card blue"><i class="fas fa-inbox"></i><div><strong id="ac-total">0</strong><span>Total Complaints</span></div></div>
+          <div class="stat-card orange"><i class="fas fa-clock"></i><div><strong id="ac-open">0</strong><span>Open</span></div></div>
+          <div class="stat-card yellow"><i class="fas fa-spinner"></i><div><strong id="ac-inprogress">0</strong><span>In Progress</span></div></div>
+          <div class="stat-card green"><i class="fas fa-check-circle"></i><div><strong id="ac-resolved">0</strong><span>Resolved</span></div></div>
+          <div class="stat-card purple"><i class="fas fa-users"></i><div><strong id="ac-users">0</strong><span>Students</span></div></div>
+        </div>
+
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3>Complaints by Category</h3>
+            <div id="category-chart" class="bar-chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Recent Activity</h3>
+            <div id="admin-recent-activity" class="activity-feed"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: All Complaints -->
+      <div id="admin-tab-all-complaints" class="tab-content">
+        <div class="page-header">
+          <h2><i class="fas fa-inbox"></i> All Complaints</h2>
+        </div>
+        <div class="filter-bar">
+          <input type="text" id="a-search" placeholder="Search by title, student..." oninput="filterAdminComplaints()"/>
+          <select id="a-filter-status" onchange="filterAdminComplaints()">
+            <option value="">All Statuses</option>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <select id="a-filter-cat" onchange="filterAdminComplaints()">
+            <option value="">All Categories</option>
+            <option value="Academic">Academic</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Infrastructure">Infrastructure</option>
+            <option value="Library">Library</option>
+            <option value="Transport">Transport</option>
+            <option value="WiFi/Internet">WiFi/Internet</option>
+            <option value="Cafeteria">Cafeteria</option>
+            <option value="Other">Other</option>
+          </select>
+          <select id="a-filter-priority" onchange="filterAdminComplaints()">
+            <option value="">All Priorities</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+        </div>
+        <div id="admin-complaints-list"></div>
+      </div>
+
+      <!-- Tab: Manage Users -->
+      <div id="admin-tab-users" class="tab-content">
+        <div class="page-header">
+          <h2><i class="fas fa-users"></i> Manage Users</h2>
+        </div>
+        <div class="filter-bar">
+          <input type="text" id="u-search" placeholder="Search users..." oninput="filterUsers()"/>
+          <select id="u-filter-role" onchange="filterUsers()">
+            <option value="">All Roles</option>
+            <option value="student">Students</option>
+            <option value="admin">Admins</option>
+          </select>
+        </div>
+        <div id="admin-users-list"></div>
+      </div>
+
+      <!-- Tab: Admin Profile -->
+      <div id="admin-tab-admin-profile" class="tab-content">
+        <div class="page-header"><h2><i class="fas fa-user-shield"></i> Admin Profile</h2></div>
+        <div class="profile-card">
+          <div class="profile-avatar-large admin-color" id="admin-profile-avatar">A</div>
+          <div class="profile-info">
+            <div class="form-row">
+              <div class="form-group"><label>Full Name</label><input type="text" id="ap-name" readonly/></div>
+              <div class="form-group"><label>Email</label><input type="text" id="ap-email" readonly/></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Employee ID</label><input type="text" id="ap-empid" readonly/></div>
+              <div class="form-group"><label>Department</label><input type="text" id="ap-dept" readonly/></div>
+            </div>
+            <div class="form-group"><label>Role</label><input type="text" id="ap-role" readonly/></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<!-- ===================== COMPLAINT DETAIL MODAL ===================== -->
+<div id="complaint-modal" class="modal-overlay hidden" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="modal-title"></h3>
+      <button onclick="closeModal()" class="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta" id="modal-meta"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div id="modal-admin-section"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TOAST ===================== -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
